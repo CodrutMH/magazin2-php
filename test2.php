@@ -1,1 +1,0 @@
-Danut e un nechifor
