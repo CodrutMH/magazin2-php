@@ -1,7 +1,12 @@
 <?php
 include 'config.php';
 
+if (!isset($_GET['id'])) {
+    die("Produs invalid.");
+}
+
 $id = (int)$_GET['id'];
+
 $product_q = mysqli_query($conn, "SELECT * FROM products WHERE id='$id'");
 $product = mysqli_fetch_assoc($product_q);
 

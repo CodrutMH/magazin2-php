@@ -8,7 +8,7 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id = $_SESSION['user_id'];
 
-if (isset($_POST['update_cart'])) {
+if (isset($_POST['update_cart']) && isset($_POST['qty']) && is_array($_POST['qty'])) {
     foreach ($_POST['qty'] as $cart_id => $qty) {
         $qty = (int)$qty;
         if ($qty <= 0) {
